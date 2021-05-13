@@ -5,10 +5,10 @@ MAIN     = example
 target: close clean tex open
 
 tex: $(MAIN).tex
-	$(TEX) $<
+	$(TEX) $(MAIN).tex
 	$(BIB) $(MAIN).aux
-	$(TEX) $<
-	$(TEX) $<
+	$(TEX) $(MAIN).tex
+	$(TEX) $(MAIN).tex
 
 open: $(MAIN).pdf
 	cmd /c start $(MAIN).pdf
